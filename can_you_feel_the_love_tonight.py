@@ -1,7 +1,7 @@
 #
-# Description:  Edison robot plays "Can you feel the love tonight?" The Lion King OST.
-# Notes:        You can listen result here: https://www.youtube.com/watch?v=QHReAxwBLfY
-#               You can upload program to Edison robot by online EdPy environment http://edpyapp.com/#
+# Edison robot sings "Can you feel the love tonight?" The Lion King OST.
+# The video can be found here: https://www.youtube.com/watch?v=VoxqCdePFAw
+# This code can be uploaded to Edison robot using online EdPy environment http://edpyapp.com/#
 #
 
 import Ed
@@ -135,8 +135,6 @@ playTone(LENGTH_0, 26)
 
 repeat = 0
 while repeat < 2:
-
-    #--------------------------------------------------------------
 
     playTone(LENGTH_4, 29)#e8
     for x in range(3):
