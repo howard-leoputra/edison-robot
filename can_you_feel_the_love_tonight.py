@@ -1,6 +1,6 @@
 #
 # Description:  Edison robot plays "Can you feel the love tonight?" The Lion King OST.
-# Notes:        You can listen result here: https://www.youtube.com/watch?v=AzZiw1AkHkA
+# Notes:        You can listen result here: https://www.youtube.com/watch?v=QHReAxwBLfY
 #               You can upload program to Edison robot by online EdPy environment http://edpyapp.com/#
 #
 
@@ -68,8 +68,13 @@ LENGTH_0 = 0
 LENGTH_1 = 1 | 128
 LENGTH_2 = 2 | 128
 LENGTH_4 = 4 | 128
+LENGTH_6 = 6 | 128
 LENGTH_8 = 8 | 128
+LENGTH_10 = 10 | 128
+LENGTH_12 = 12 | 128
 LENGTH_16 = 16 | 128
+LENGTH_20 = 20 | 128
+LENGTH_28 = 28 | 128
 
 
 # This method must be called eighth time in every 2/4 measure or twelve time in 3/4 measure
@@ -128,89 +133,100 @@ playTone(LENGTH_0, 26)
 playTone(LENGTH_0, 26)
 playTone(LENGTH_0, 26)
 
-repeat_outer = 0
-while repeat_outer < 2:
-    
-    repeat = 0
-    while repeat < 2:
-        playTone(LENGTH_4, 29)#e8
-        for x in range(3):
-            playTone(LENGTH_0, 29)
-        Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
-        playTone(LENGTH_4, 31)##f8
-        for x in range(3):
-            playTone(LENGTH_0, 31)
-        Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
-        
-        playTone(LENGTH_8, 32)#g8
-        for x in range(7):
-            playTone(LENGTH_0, 32)
-        Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
-
-        playTone(LENGTH_8, 34)#a8
-        for x in range(7):
-            playTone(LENGTH_0, 34)
-        Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
-
-        playTone(LENGTH_8, 32)#g8
-        for x in range(7):
-            playTone(LENGTH_0, 32)
-        Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
-        
-        repeat = repeat + 1
+repeat = 0
+while repeat < 2:
 
     #--------------------------------------------------------------
 
     playTone(LENGTH_4, 29)#e8
-    playTone(LENGTH_0, 29)
-    playTone(LENGTH_0, 29)
-    playTone(LENGTH_0, 29)
+    for x in range(3):
+        playTone(LENGTH_0, 29)
     Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
-    playTone(LENGTH_4, 31)##f8
-    playTone(LENGTH_0, 31)
-    playTone(LENGTH_0, 31)
-    playTone(LENGTH_0, 31)
+    
+    playTone(LENGTH_2, 31)##f8
+    for x in range(1):
+        playTone(LENGTH_0, 31)
+    Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
+    
+    playTone(LENGTH_6, 32)#g8
+    for x in range(5): 
+        playTone(LENGTH_0, 32)
     Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
 
-    playTone(LENGTH_8, 32)#g8
-    for x in range(7):
+    playTone(LENGTH_4, 34)#a8
+    for x in range(3):
+        playTone(LENGTH_0, 34)
+    Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
+
+    playTone(LENGTH_4, 32)#g8
+    for x in range(3):
+        playTone(LENGTH_0, 32)
+    Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
+
+    playTone(LENGTH_12, 27)#d8
+    for x in range(11):
+        playTone(LENGTH_0, 27)
+    Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
+
+    #--------------------------------------------------------------
+
+    playTone(LENGTH_4, 29)#e8
+    for x in range(3):
+        playTone(LENGTH_0, 29)
+    Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
+    
+    playTone(LENGTH_2, 31)##f8
+    for x in range(1):
+        playTone(LENGTH_0, 31)
+    Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
+    
+    playTone(LENGTH_6, 32)#g8
+    for x in range(5): 
+        playTone(LENGTH_0, 32)
+    Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
+
+    playTone(LENGTH_4, 34)#a8
+    for x in range(3):
+        playTone(LENGTH_0, 34)
+    Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
+
+    playTone(LENGTH_16, 32)#g8
+    for x in range(15):
+        playTone(LENGTH_0, 32)
+    Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
+
+    #--------------------------------------------------------------
+
+    playTone(LENGTH_4, 29)#e8
+    for x in range(3):
+        playTone(LENGTH_0, 29)
+    Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
+    
+    playTone(LENGTH_2, 31)##f8
+    for x in range(1):
+        playTone(LENGTH_0, 31)
+    Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
+    
+    playTone(LENGTH_6, 32)#g8
+    for x in range(5): 
         playTone(LENGTH_0, 32)
     Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
 
     # ---------------------------------------------------------------
+
+    playTone(LENGTH_4, 27)#d8
+    for x in range(3):
+        playTone(LENGTH_0, 27)
+    Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
 
     playTone(LENGTH_4, 39)#d9
-    playTone(LENGTH_0, 39)
-    playTone(LENGTH_0, 39)
-    playTone(LENGTH_0, 39)
-    Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
-
-    playTone(LENGTH_2, 36)#b8
-    playTone(LENGTH_0, 36)
-    Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
-
-    playTone(LENGTH_8, 32)#g8
-    for x in range(7):
-        playTone(LENGTH_0, 32)
-    Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
-
-    # ---------------------------------------------------------------
-
-    playTone(LENGTH_4, 37)#c9
-    playTone(LENGTH_0, 37)
-    playTone(LENGTH_0, 37)
-    playTone(LENGTH_0, 37)
+    for x in range(3):
+        playTone(LENGTH_0, 39)
     Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
 
     playTone(LENGTH_4, 36)#b8
-    playTone(LENGTH_0, 36)
-    playTone(LENGTH_0, 36)
-    playTone(LENGTH_0, 36)
-    Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
-
-    playTone(LENGTH_8, 34)#a8
-    for x in range(7):
-        playTone(LENGTH_0, 34)
+    for x in range(3):
+        playTone(LENGTH_0, 36)
     Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
 
     playTone(LENGTH_8, 32)#g8
@@ -218,34 +234,49 @@ while repeat_outer < 2:
         playTone(LENGTH_0, 32)
     Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
 
-    playTone(LENGTH_8, 34)#a8
-    for x in range(7):
+    # improvisation
+    #playTone(LENGTH_4, 32)#g8
+    #for x in range(3):
+    #    playTone(LENGTH_0, 32)
+    #Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
+    #playTone(LENGTH_4, 27)#d8
+    #for x in range(3):
+    #    playTone(LENGTH_0, 27)
+    #Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
+
+    playTone(LENGTH_4, 37)#c9
+    for x in range(3):
+        playTone(LENGTH_0, 37)
+    Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
+    
+    # ---------------------------------------------------------------
+
+    playTone(LENGTH_2, 36)#b8
+    for x in range(1):
+        playTone(LENGTH_0, 36)
+    Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
+
+    playTone(LENGTH_6, 34)#a8
+    for x in range(5):
+        playTone(LENGTH_0, 34)
+    Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
+
+    playTone(LENGTH_4, 32)#g8
+    for x in range(3):
+        playTone(LENGTH_0, 32)
+    Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
+
+    playTone(LENGTH_16, 34)#a8
+    for x in range(15):
         playTone(LENGTH_0, 34)
     Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
 
     # ---------------------------------------------------------------
 
-    repeat_outer = repeat_outer + 1
+    repeat = repeat + 1
 
 
-playTone(LENGTH_4, 39)#d9
-playTone(LENGTH_0, 39)
-playTone(LENGTH_0, 39)
-playTone(LENGTH_0, 39)
-Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
-
-playTone(LENGTH_4, 37)#c9
-playTone(LENGTH_0, 37)
-playTone(LENGTH_0, 37)
-playTone(LENGTH_0, 37)
-Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
-
-playTone(LENGTH_4, 37)#c9
-playTone(LENGTH_0, 37)
-playTone(LENGTH_0, 37)
-playTone(LENGTH_0, 37)
-Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
-
+# ---------------------------------------------------------
 
 playTone(LENGTH_2, 27)#d8
 playTone(LENGTH_0, 27)
@@ -265,21 +296,25 @@ Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensa
 playTone(LENGTH_2, 36)#b8
 playTone(LENGTH_0, 36)
 Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
-playTone(LENGTH_2, 37)#c9
-playTone(LENGTH_0, 37)
+playTone(LENGTH_4, 37)#c9
+for x in range(3):
+    playTone(LENGTH_0, 37)
 Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
+
+# ---------------------------------------------------------
 
 playTone(LENGTH_8, 39)#d9
 for x in range(7):
     playTone(LENGTH_0, 39)
 Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
 
-playTone(LENGTH_2, 36)#b8
-playTone(LENGTH_0, 36)
+playTone(LENGTH_4, 36)#b8
+for x in range(3):
+    playTone(LENGTH_0, 36)
 Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
 
-playTone(LENGTH_8, 34)#a8
-for x in range(7):
+playTone(LENGTH_12, 34)#a8
+for x in range(11):
     playTone(LENGTH_0, 34)
 Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
 
@@ -288,30 +323,65 @@ for x in range(7):
     playTone(LENGTH_0, 39)
 Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
 
-playTone(LENGTH_2, 36)#b8
-playTone(LENGTH_0, 36)
+playTone(LENGTH_8, 36)#b8
+for x in range(7):
+    playTone(LENGTH_0, 36)
 Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
 
-playTone(LENGTH_8, 32)#g8
-for x in range(7):
+playTone(LENGTH_4, 32)#g8
+for x in range(3):
     playTone(LENGTH_0, 32)
 Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
 
 # -------------------------------------------------
 
-playTone(LENGTH_8, 32)#g8
+#improvation too long
+
+#playTone(LENGTH_28, 29)#e8
+#for x in range(27):
+#    playTone(LENGTH_0, 29)
+#Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
+
+playTone(LENGTH_8, 29)#e8
 for x in range(7):
+    playTone(LENGTH_0, 29)
+Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
+playTone(LENGTH_4, 20)#g7
+for x in range(3):
+    playTone(LENGTH_0, 20)
+Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
+playTone(LENGTH_4, 25)#c8
+for x in range(3):
+    playTone(LENGTH_0, 25)
+Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
+playTone(LENGTH_4, 29)#e8
+for x in range(3):
+    playTone(LENGTH_0, 29)
+Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
+playTone(LENGTH_8, 27)#d8
+for x in range(7):
+    playTone(LENGTH_0, 27)
+Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
+
+# -------------------------------------------------
+
+playTone(LENGTH_4, 27)#d8
+for x in range(3):
+    playTone(LENGTH_0, 27)
+Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
+
+playTone(LENGTH_4, 32)#g8
+for x in range(3):
     playTone(LENGTH_0, 32)
 Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
 
-playTone(LENGTH_4, 37)#c9
-playTone(LENGTH_0, 37)
-playTone(LENGTH_0, 37)
-playTone(LENGTH_0, 37)
+playTone(LENGTH_8, 37)#c9
+for x in range(7):
+    playTone(LENGTH_0, 37)
 Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
 
-playTone(LENGTH_4, 36)#b8
-for x in range(3):
+playTone(LENGTH_8, 36)#b8
+for x in range(7):
     playTone(LENGTH_0, 36)
 Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
 
@@ -322,8 +392,16 @@ Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensa
 
 # -------------------------------------------------
 
-playTone(LENGTH_2, 45)#g9
-playTone(LENGTH_0, 45)
+#a9 missing replace with a8
+
+playTone(LENGTH_2, 34)#a8
+for x in range(1):
+    playTone(LENGTH_0, 34)
+Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
+
+
+playTone(LENGTH_2, 44)#g9
+playTone(LENGTH_0, 44)
 Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
 playTone(LENGTH_2, 43)##f9
 playTone(LENGTH_0, 43)
@@ -343,12 +421,15 @@ Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensa
 playTone(LENGTH_2, 34)#a8
 playTone(LENGTH_0, 34)
 Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
-playTone(LENGTH_2, 32)#g8
-playTone(LENGTH_0, 32)
+playTone(LENGTH_4, 32)#g8
+for x in range(3):
+    playTone(LENGTH_0, 32)
 Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
-playTone(LENGTH_2, 31)##f8
-playTone(LENGTH_0, 31)
+playTone(LENGTH_4, 31)##f8
+for x in range(3):
+    playTone(LENGTH_0, 31)
 Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
+
 playTone(LENGTH_8, 29)#e8
 for x in range(7):
     playTone(LENGTH_0, 29)
@@ -356,30 +437,40 @@ Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensa
 
 # --------------------------------------------------
 
-
-playTone(LENGTH_4, 29)#e8
-for x in range(7):
+playTone(LENGTH_2, 29)#e8
+for x in range(1):
     playTone(LENGTH_0, 29)
 Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
-playTone(LENGTH_4, 31)##f8
-for x in range(3):
+playTone(LENGTH_2, 31)##f8
+for x in range(1):
     playTone(LENGTH_0, 31)
 Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
 
-playTone(LENGTH_8, 32)#g8
-for x in range(7):
+playTone(LENGTH_12, 32)#g8
+for x in range(11):
     playTone(LENGTH_0, 32)
 Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
 
 # ---------------------------------------------------------------
 
-playTone(LENGTH_4, 39)#d9
+playTone(LENGTH_4, 27)#d8
 for x in range(3):
+    playTone(LENGTH_0, 27)
+Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
+
+playTone(LENGTH_4, 27)#d8
+for x in range(3):
+    playTone(LENGTH_0, 27)
+Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
+
+playTone(LENGTH_8, 39)#d9
+for x in range(7):
     playTone(LENGTH_0, 39)
 Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
 
-playTone(LENGTH_2, 36)#b8
-playTone(LENGTH_0, 36)
+playTone(LENGTH_8, 36)#b8
+for x in range(7):
+    playTone(LENGTH_0, 36)
 Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
 
 playTone(LENGTH_4, 32)#g8
@@ -396,28 +487,31 @@ for x in range(7):
     playTone(LENGTH_0, 29)
 Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
 
-# --------------------------------------------
+# ---------------------------------------------------------------
 
 playTone(LENGTH_8, 37)#c9
 for x in range(7):
     playTone(LENGTH_0, 37)
 Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
+
 playTone(LENGTH_8, 36)#b8
 for x in range(7):
     playTone(LENGTH_0, 36)
 Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
-playTone(LENGTH_8, 34)#a8
-for x in range(7):
-    playTone(LENGTH_0, 34)
-Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
-playTone(LENGTH_8, 36)#b8
-for x in range(7):
-    playTone(LENGTH_0, 36)
-Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
+
 playTone(LENGTH_8, 34)#a8
 for x in range(7):
     playTone(LENGTH_0, 34)
 Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
 
+playTone(LENGTH_4, 32)#g8
+for x in range(3):
+    playTone(LENGTH_0, 32)
+Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
+
+playTone(LENGTH_20, 32)#g8
+for x in range(19):
+    playTone(LENGTH_0, 32)
+Ed.WriteModuleRegister8Bit(Ed.MODULE_LEFT_LED, Ed.REG_LED_OUTPUT_8, 0) #compensation of some unexplained unsync
 
 # ---------------------------------------------------------------
